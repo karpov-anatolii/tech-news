@@ -1,4 +1,4 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import authOptions from "@/app/api/auth/[...nextauth]/options";
 import { TPost } from "@/app/types";
 import EditPostForm from "@/components/EditPostForm";
 import { getServerSession } from "next-auth/next";
