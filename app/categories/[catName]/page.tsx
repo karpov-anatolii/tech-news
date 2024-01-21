@@ -1,8 +1,5 @@
 import Post from "@/components/Post";
 import Link from "next/link";
-import { getServerSession } from "next-auth/next";
-import authOptions from "../../api/auth/[...nextauth]/options";
-import { redirect } from "next/navigation";
 import { TPost } from "../../types";
 
 const getPosts = async (catName: string): Promise<TPost[] | null> => {
@@ -26,14 +23,6 @@ export default async function Categories({
 }: {
   params: { catName: string };
 }) {
-  //   const session = await getServerSession(authOptions);
-  //   const email = session?.user?.email;
-  //   let posts: TPost[] = [];
-
-  //   if (!session) {
-  //     redirect("/sign-in");
-  //   }
-
   let posts: TPost[] | null = [];
   const catName = params.catName;
   if (catName) {
