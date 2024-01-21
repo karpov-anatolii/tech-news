@@ -1,7 +1,7 @@
 import Post from "@/components/Post";
 import Link from "next/link";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../../api/auth/[...nextauth]/route";
+import { authOptions } from "../../api/auth/[...nextauth]/auth";
 import { redirect } from "next/navigation";
 import { TPost } from "../../types";
 
